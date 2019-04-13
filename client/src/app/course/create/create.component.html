@@ -1,0 +1,21 @@
+<div class="Create">
+    <div>
+        <img alt="backgroundPicture"  src="http://www.learnod.com/img/courses/technical-analysis-online-course.jpg"/>
+        <form [formGroup]="form" (submit)="createCourse()">
+            <h1>Create Course</h1>
+            <label html="title">Title</label>
+            <input type="text" name="title" formControlName="title" id="title"
+                   placeholder="LEARN HTML IN 2 WEEKS"/>
+            <label html="description">Description</label>
+            <input type="text" name="description" formControlName="description" id="description"
+                   placeholder="Description..."/>
+            <label html="imageUrl">Image URL</label>
+            <input type="text" name="imageUrl" formControlName="imageUrl" id="imageUrl"
+                   placeholder="https://someCoursePic.jpg"/>
+            <label htmlFor="cost">Course Cost</label>
+            <input type="text" name="cost" formControlName="cost" id="cost"
+                   placeholder="999.99"/>
+            <input type="submit" value="Create"/>
+        </form>
+    </div>
+</div>

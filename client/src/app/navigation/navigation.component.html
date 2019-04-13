@@ -1,0 +1,26 @@
+<nav>
+  <ul>
+    <li class="header-left">
+      <a routerLink="/home">Home</a></li>
+      <li>
+          <a *ngIf="authService.isAuthenticated()" routerLink="/logout" (click)="logout()">Logout</a>
+        </li>
+    <li>
+      <a *ngIf="isAdmin()" routerLink="/create">Create Course</a>
+    </li>
+    <li>
+    <a *ngIf="authService.isAuthenticated()" routerLink="/profile">Profile</a>
+    </li>
+    
+    <li>
+      <a *ngIf="authService.isAuthenticated()  && !isAdmin()" routerLink="/mycourses">My Courses</a>
+    </li>
+    <li>
+      <a *ngIf="!authService.isAuthenticated()" routerLink="/login">Login</a>
+    </li>
+    <li>
+      <a *ngIf="!authService.isAuthenticated()" routerLink="/register">Register</a>
+    </li>
+    
+  </ul>
+</nav>

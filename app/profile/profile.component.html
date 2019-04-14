@@ -1,0 +1,7 @@
+<div class="card">
+  <h1>Username: {{username}}</h1>
+  <img *ngIf="authService.isAdmin()" src="http://img.over-blog-kiwi.com/1/95/37/23/20160118/ob_843bd7_admin.png" alt="adminPicture" />
+  <img *ngIf="!authService.isAdmin()" src="https://onlinemastery.ro/wp-content/uploads/2016/10/35778-200.png" alt="studentPicture" />
+  <p *ngIf="authService.isAdmin()" class="title">Head admin of Private Online School 2019</p>
+  <p *ngIf="!authService.isAdmin()" class="title">Online student in Private Online School 2019</p>
+</div>

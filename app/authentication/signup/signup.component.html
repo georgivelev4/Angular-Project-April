@@ -1,0 +1,19 @@
+<div class="Register">
+    <img alt="backgroundPicture" src="https://library.leeds.ac.uk/images/1400x700_edward_boyle_reception.jpg"/>
+    <form [formGroup]="form" (submit)="signUp()">
+        <h1>Register</h1>
+        <label html="username">Username</label>
+        <input type="text" name="username" formControlName="username" id="username"
+               placeholder="georgivelev4"/>
+        <label html="email">Email</label>
+        <input type="text" name="email" id="email"
+               placeholder="georgivelev4@gmail.com" formControlName="email"/>
+        <label html="password">Password</label>
+        <input type="password"  name="password"  formControlName="password" id="password"
+               placeholder="******"/>
+        <label html="repeatPassword">Repeat Password</label>
+        <input type="password" name="repeatPassword" id="repeatPassword"
+               placeholder="******" formControlName="repeatPassword"/>
+        <input type="submit" value="Register"/>
+    </form>
+</div>

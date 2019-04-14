@@ -1,0 +1,11 @@
+<div class="Login">
+    <img alt="backgroundPicture" src="https://library.leeds.ac.uk/images/1400x700_edward_boyle_reception.jpg"/>
+    <form [formGroup]="form" (submit)="signIn()">
+        <h1>Login</h1>
+        <label html="usernameLogin">Username</label>
+        <input type="text" name="username" formControlName="username" id="usernameLogin" placeholder="georgivelev4"/>
+        <label html="passwordLogin">Password</label>
+        <input type="password" name="password" formControlName="password" id="passwordLogin" placeholder="******"/>
+        <input type="submit" value="Login"/>
+    </form>
+  </div>

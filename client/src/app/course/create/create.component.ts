@@ -25,7 +25,7 @@ form;
     this.courseService
     .createCourse(this.form.value)
     .subscribe((data) => {
-      console.log(data);
+      
       this.toastr.success(data['message']);
       this.router.navigate([ '/home' ]);
     });

@@ -16,7 +16,8 @@ export class MyCoursesComponent implements OnInit {
     this.courseService
     .getMyCourses(this.username)
     .subscribe((data)=>{
-      this.courses = data['courses'];
+      console.log(data)
+      this.courses = data['coursesNeeded'];
     })
   }
 

@@ -7,6 +7,8 @@ import { CreateComponent } from './course/create/create.component';
 import { AuthGuardAdmin } from './authentication/guards/auth-guard-admin.service';
 import { AuthGuard } from './authentication/guards/auth.guard';
 import { MyCoursesComponent } from './course/my-courses/my-courses.component';
+import { ProfileComponent } from './profile/profile.component';
+import { TakeCourseComponent } from './course/take-course/take-course.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -14,7 +16,9 @@ const routes: Routes = [
   { path: 'login', component: SinginComponent },
   { path: 'register', component: SignupComponent },
   { path: 'create', component: CreateComponent, canActivate: [AuthGuardAdmin] },
-  { path: 'mycourses', component: MyCoursesComponent, canActivate:[AuthGuard]},
+  { path: 'mycourses', component: MyCoursesComponent, canActivate: [AuthGuard] },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: 'takecourse/:id', component: TakeCourseComponent, canActivate:[AuthGuard]}
 
 ];
 

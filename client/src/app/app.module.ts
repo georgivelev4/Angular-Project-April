@@ -17,6 +17,8 @@ import { CreateComponent } from './course/create/create.component';
 import { CourseService } from './course/course.service';
 import { JwtInterceptorService } from './jwt-interceptor.service';
 import { MyCoursesComponent } from './course/my-courses/my-courses.component';
+import { ProfileComponent } from './profile/profile.component';
+import { TakeCourseComponent } from './course/take-course/take-course.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { MyCoursesComponent } from './course/my-courses/my-courses.component';
     SinginComponent,
     CreateComponent,
     MyCoursesComponent,
+    ProfileComponent,
+    TakeCourseComponent,
   ],
   imports: [
     BrowserModule,

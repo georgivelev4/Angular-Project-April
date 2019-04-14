@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../authentication/auth.service';
+import { CourseService } from '../course/course.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  allCourses;
+  constructor(private authService: AuthService, private courseService: CourseService) { }
 
   ngOnInit() {
+    this.courseService
+    .getAllCourses()
+    .subscribe((data)=>{
+      this.allCourses = data['courses'];
+    })
   }
 
 }

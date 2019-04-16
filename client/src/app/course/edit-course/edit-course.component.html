@@ -1,0 +1,19 @@
+<div class="Edit">
+  <div class="container">
+      <img alt="backgroundPicture"  src="http://www.learnod.com/img/courses/technical-analysis-online-course.jpg"/>
+      <form [formGroup]="form">
+          <h1>Edit Course</h1>
+          <label html="title">Title</label>
+          <input type="text" name="title" id="title" formControlName="title" value="{{course?.title}}"/>
+          <label html="description">Description</label>
+          <input type="text" name="description" id="description" formControlName="description" value="{{course?.description}}"/>
+          <label html="imageUrl">Image URL</label>
+          <input type="text" name="imageUrl" id="imageUrl" formControlName="imageUrl" value="{{course?.imageUrl}}"/>
+          <label html="cost">Course Cost</label>
+          <input type="text" name="cost" id="cost" formControlName="cost" value="{{course?.cost}}" />
+          <a routerLink="#" class="edit-course-btn" (click)="editCourse()">Edit Course</a>
+      </form>
+
+  </div>
+
+</div>

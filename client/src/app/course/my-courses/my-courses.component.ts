@@ -14,11 +14,10 @@ export class MyCoursesComponent implements OnInit {
 
   ngOnInit() {
     this.courseService
-    .getMyCourses(this.username)
-    .subscribe((data)=>{
-      console.log(data)
-      this.courses = data['coursesNeeded'];
-    })
+      .getMyCourses(this.username)
+      .subscribe((data) => {
+        this.courses = data['coursesNeeded'];
+      })
   }
 
 }

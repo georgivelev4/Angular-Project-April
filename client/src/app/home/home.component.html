@@ -20,7 +20,7 @@
     <h2>{{course.title}}</h2>
     <img alt="course" class="home-jpg" src={{course.imageUrl}} />
     <h2 class="price">Course cost: $ {{course.cost}}</h2>
-    <a routerLink="/edit" class="edit-course-btn">Edit Course</a>
-    <a routerLink="/delete" class="delete-course-btn">Delete Course</a>
+    <a [routerLink]="['/editcourse/', course._id]" class="edit-course-btn">Edit Course</a>
+    <a [routerLink]="['/deletecourse/', course._id]" class="delete-course-btn">Delete Course</a>
   </div>
 </div>

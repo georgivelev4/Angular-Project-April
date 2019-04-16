@@ -21,18 +21,15 @@ export class SinginComponent implements OnInit {
     })
   }
   signIn(){
-    
     this.authService
       .login(this.form.value)
       .subscribe((data) => {
-        console.log(data);
        localStorage.setItem('token', data['token']);
        localStorage.setItem('username', data['username']);
        localStorage.setItem('isAdmin', data['isAdmin']);
         this.toastr.success(data['message']);
         this.router.navigate([ '/home' ]);
       });
-
   }
 
 }

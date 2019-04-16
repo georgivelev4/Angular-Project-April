@@ -27,7 +27,6 @@ form;
     this.authService
       .register(this.form.value)
       .subscribe((data) => {
-        console.log(data);
         localStorage.setItem('token', data['token']);
        localStorage.setItem('username', data['username']);
        localStorage.setItem('isAdmin', data['isAdmin']);

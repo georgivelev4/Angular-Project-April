@@ -19,6 +19,9 @@ import { JwtInterceptorService } from './jwt-interceptor.service';
 import { MyCoursesComponent } from './course/my-courses/my-courses.component';
 import { ProfileComponent } from './profile/profile.component';
 import { TakeCourseComponent } from './course/take-course/take-course.component';
+import { DeleteCourseComponent } from './course/delete-course/delete-course.component';
+import { EditCourseComponent } from './course/edit-course/edit-course.component';
+import { ResponseErrorInterceptorService } from './response-error-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,8 @@ import { TakeCourseComponent } from './course/take-course/take-course.component'
     MyCoursesComponent,
     ProfileComponent,
     TakeCourseComponent,
+    DeleteCourseComponent,
+    EditCourseComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +53,9 @@ import { TakeCourseComponent } from './course/take-course/take-course.component'
     ToastrService,
     {
       provide: HTTP_INTERCEPTORS, useClass: JwtInterceptorService, multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS, useClass: ResponseErrorInterceptorService, multi: true
     }
 
   ],

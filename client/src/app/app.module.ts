@@ -5,23 +5,23 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignupComponent } from './authentication/signup/signup.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { SignupComponent } from './components/authentication/signup/signup.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
-import { HomeComponent } from './home/home.component';
-import { SinginComponent } from './authentication/singin/singin.component';
-import { AuthService } from './authentication/auth.service';
-import { CreateComponent } from './course/create/create.component';
-import { CourseService } from './course/course.service';
-import { JwtInterceptorService } from './jwt-interceptor.service';
-import { MyCoursesComponent } from './course/my-courses/my-courses.component';
-import { ProfileComponent } from './profile/profile.component';
-import { TakeCourseComponent } from './course/take-course/take-course.component';
-import { DeleteCourseComponent } from './course/delete-course/delete-course.component';
-import { EditCourseComponent } from './course/edit-course/edit-course.component';
-import { ResponseErrorInterceptorService } from './response-error-interceptor.service';
+import { HomeComponent } from './components/home/home.component';
+import { SinginComponent } from './components/authentication/singin/singin.component';
+import { AuthService } from './core/services/auth.service';
+import { CreateComponent } from './components/course/create/create.component';
+import { CourseService } from './core/services/course.service';
+import { JwtInterceptorService } from './core/interceptors/jwt-interceptor.service';
+import { MyCoursesComponent } from './components/course/my-courses/my-courses.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { TakeCourseComponent } from './components/course/take-course/take-course.component';
+import { DeleteCourseComponent } from './components/course/delete-course/delete-course.component';
+import { EditCourseComponent } from './components/course/edit-course/edit-course.component';
+import { ResponseErrorInterceptorService } from './core/interceptors/response-error-interceptor.service';
 
 @NgModule({
   declarations: [

@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SinginComponent } from './authentication/singin/singin.component';
-import { HomeComponent } from './home/home.component';
-import { SignupComponent } from './authentication/signup/signup.component';
-import { CreateComponent } from './course/create/create.component';
-import { AuthGuardAdmin } from './authentication/guards/auth-guard-admin.service';
-import { AuthGuard } from './authentication/guards/auth.guard';
-import { MyCoursesComponent } from './course/my-courses/my-courses.component';
-import { ProfileComponent } from './profile/profile.component';
-import { TakeCourseComponent } from './course/take-course/take-course.component';
-import { DeleteCourseComponent } from './course/delete-course/delete-course.component';
-import { EditCourseComponent } from './course/edit-course/edit-course.component';
+import { SinginComponent } from './components/authentication/singin/singin.component';
+import { HomeComponent } from './components/home/home.component';
+import { SignupComponent } from './components/authentication/signup/signup.component';
+import { CreateComponent } from './components/course/create/create.component';
+import { AuthGuardAdmin } from './core/guards/auth-guard-admin.service';
+import { AuthGuard } from './core/guards/auth.guard';
+import { MyCoursesComponent } from './components/course/my-courses/my-courses.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { TakeCourseComponent } from './components/course/take-course/take-course.component';
+import { DeleteCourseComponent } from './components/course/delete-course/delete-course.component';
+import { EditCourseComponent } from './components/course/edit-course/edit-course.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
